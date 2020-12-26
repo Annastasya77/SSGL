@@ -440,6 +440,7 @@
                 <Block Type="MyObjectBuilder_InteriorLight" Subtype="SBLargeLightCorner" />
                 <Block Type="MyObjectBuilder_InteriorLight" Subtype="SmallBlockSmallLightOffset" />
                 <Block Type="MyObjectBuilder_InteriorLight" Subtype="SmallLightOffset" />
+            </Blocks>
         </BlockVariantGroup>
 
         <BlockVariantGroup>
