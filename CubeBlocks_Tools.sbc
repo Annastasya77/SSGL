@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CubeBlocks>
+
+    <!-- Region Tools -->
+    <Definition xsi:type="MyObjectBuilder_ShipDrillDefinition">    <!-- SmallBlockDrill -->
+      <Id>
+        <TypeId>Drill</TypeId>
+        <SubtypeId>SmallBlockDrill</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Block_Drill</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\drill.dds</Icon>
+      <Description>Description_Drill</Description>
+      <CubeSize>Small</CubeSize>
+        <GuiVisible>false</GuiVisible>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="3" z="6" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Small\driller.mwm</Model>
+      <PlaceDecals>false</PlaceDecals>
+      <UseModelIntersection>true</UseModelIntersection>
+      <Components>
+        <Component Subtype="SteelPlate" Count="20" />
+        <Component Subtype="Construction" Count="30" />
+        <Component Subtype="LargeTube" Count="4" />
+        <Component Subtype="Motor" Count="1" />
+        <Component Subtype="Computer" Count="1" />
+        <Component Subtype="SteelPlate" Count="12" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <Center x="1" y="1" z="5" />
+      <MountPoints>
+        <MountPoint Side="Back" StartX="0" StartY="1" EndX="3" EndY="2" Default="true" />
+        <MountPoint Side="Right" StartX="0" StartY="1" EndX="2" EndY="2" />
+        <MountPoint Side="Left" StartX="4" StartY="1" EndX="6" EndY="2" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.50" File="Models\Cubes\Small\DrillerConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Small\DrillerConstruction_2.mwm" />
+      </BuildProgressModels>
+      <VoxelPlacement>
+        <!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
+        <StaticMode>
+          <PlacementMode>OutsideVoxel</PlacementMode>
+          <MaxAllowed>0.2</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </StaticMode>
+        <DynamicMode>
+          <PlacementMode>OutsideVoxel</PlacementMode>
+          <MaxAllowed>0.2</MaxAllowed>
+          <MinAllowed>0.01</MinAllowed>
+        </DynamicMode>
+      </VoxelPlacement>
+      <BlockPairName>Drill</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <SensorRadius>1.3</SensorRadius>
+      <SensorOffset>0.8</SensorOffset>
+      <CutOutRadius>1.3</CutOutRadius>
+      <CutOutOffset>0.6</CutOutOffset>
+      <ParticleOffset>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>-1.45</Z>
+      </ParticleOffset>
+
+      <DeformationRatio>0.2</DeformationRatio>
+      <UsesDeformation>false</UsesDeformation>
+      <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+      <DamagedSound>ParticleHeavyMech</DamagedSound>
+      <PrimarySound>ToolShipDrillIdle</PrimarySound>
+      <DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <PCU>190</PCU>
+    </Definition>
+    <Definition xsi:type="MyObjectBuilder_ShipDrillDefinition">    <!-- SmallBlockExcavator -->
+      <Id>
+        <TypeId>Drill</TypeId>
+        <SubtypeId>SmallBlockExcavator</SubtypeId>
+      </Id>
+      <DisplayName>Excavator</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\drill.dds</Icon>
+      <Description>Description_Drill</Description>
+      <CubeSize>Small</CubeSize>
+        <GuiVisible>false</GuiVisible>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="3" z="6" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Small\driller.mwm</Model>
+      <PlaceDecals>false</PlaceDecals>
+      <UseModelIntersection>true</UseModelIntersection>
+      <Components>
+        <Component Subtype="SteelPlate" Count="20" />
+        <Component Subtype="Construction" Count="30" />
+        <Component Subtype="LargeTube" Count="4" />
+        <Component Subtype="Motor" Count="1" />
+        <Component Subtype="Computer" Count="1" />
+        <Component Subtype="SteelPlate" Count="12" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <Center x="1" y="1" z="5" />
+      <MountPoints>
+        <MountPoint Side="Back" StartX="0" StartY="1" EndX="3" EndY="2" Default="true" />
+        <MountPoint Side="Right" StartX="0" StartY="1" EndX="2" EndY="2" />
+        <MountPoint Side="Left" StartX="4" StartY="1" EndX="6" EndY="2" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.50" File="Models\Cubes\Small\DrillerConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Small\DrillerConstruction_2.mwm" />
+      </BuildProgressModels>
+      <VoxelPlacement>
+        <!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
+        <StaticMode>
+          <PlacementMode>OutsideVoxel</PlacementMode>
+          <MaxAllowed>0.2</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </StaticMode>
+        <DynamicMode>
+          <PlacementMode>OutsideVoxel</PlacementMode>
+          <MaxAllowed>0.2</MaxAllowed>
+          <MinAllowed>0.01</MinAllowed>
+        </DynamicMode>
+      </VoxelPlacement>
+      <BlockPairName>Excavator</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <SensorRadius>3.0</SensorRadius>
+      <SensorOffset>1.5</SensorOffset>
+      <CutOutRadius>3.0</CutOutRadius>
+      <CutOutOffset>1.5</CutOutOffset>
+      <ParticleOffset>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>-1.45</Z>
+      </ParticleOffset>
+
+      <DeformationRatio>0.2</DeformationRatio>
+      <UsesDeformation>false</UsesDeformation>
+      <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+      <DamagedSound>ParticleHeavyMech</DamagedSound>
+      <PrimarySound>ToolShipDrillIdle</PrimarySound>
+      <DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <PCU>190</PCU>
+    </Definition>
+
+<!--     <Definition xsi:type="MyObjectBuilder_OreDetectorDefinition">    <!-- LargeOreDetector -- >
+      <Id>
+        <TypeId>OreDetector</TypeId>
+        <SubtypeId>LargeOreDetector</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Block_OreDetector</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\detector.dds</Icon>
+      <Description>Description_OreDetector</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="2" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Large\OreDetector.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="30" />
+        <Component Subtype="Construction" Count="40" />
+        <Component Subtype="Motor" Count="5" />
+        <Component Subtype="Computer" Count="25" />
+        <Component Subtype="Detector" Count="20" />
+        <Component Subtype="SteelPlate" Count="20" />
+      </Components>
+      <CriticalComponent Subtype="Detector" Index="0" />
+      <Center x="0" y="0" z="1" />
+      <MountPoints>
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1" Default="true" />
+        <MountPoint Side="Left" StartX="1" StartY="0" EndX="2" EndY="1" />
+        <MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Bottom" StartX="0" StartY="1" EndX="1" EndY="2" />
+        <MountPoint Side="Top" StartX="0" StartY="0" EndX="1" EndY="1" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\OreDetectorConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\OreDetectorConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\OreDetectorConstruction_3.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>OreDetector</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>30</BuildTimeSeconds>
+      <ResourceSinkGroup>Utility</ResourceSinkGroup>
+      <MaximumRange>300</MaximumRange>
+      <DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
+      <DamagedSound>ParticleElectrical</DamagedSound>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <PCU>40</PCU>
+    </Definition> -->
+    <Definition xsi:type="MyObjectBuilder_OreDetectorDefinition">    <!-- SBLargeOreDetector -->
+      <Id>
+        <TypeId>OreDetector</TypeId>
+        <SubtypeId>SBLargeOreDetector</SubtypeId>
+      </Id>
+      <DisplayName>Large Ore Detector</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\detector.dds</Icon>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="5" y="5" z="9" />
+      <ModelOffset x="0" y="0" z="-0.25" />
+      <Center x="2" y="2" z="6" />
+      <Model>Models\Cubes\Large\OreDetector.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="30" />
+        <Component Subtype="Construction" Count="20" />
+        <Component Subtype="Motor" Count="5" />
+        <Component Subtype="Computer" Count="25" />
+        <Component Subtype="Detector" Count="15" />
+        <Component Subtype="Construction" Count="20" />
+        <Component Subtype="Detector" Count="10" />
+        <Component Subtype="SteelPlate" Count="20" />
+      </Components>
+      <CriticalComponent Subtype="Detector" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="5" EndY="5" />
+        <MountPoint Side="Left" StartX="4" StartY="0" EndX="9" EndY="5" />
+        <MountPoint Side="Right" StartX="0" StartY="0" EndX="5" EndY="5" />
+        <MountPoint Side="Bottom" StartX="0" StartY="4" EndX="5" EndY="9" />
+        <MountPoint Side="Top" StartX="0" StartY="0" EndX="5" EndY="5" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\OreDetectorConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\OreDetectorConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\OreDetectorConstruction_3.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>SBLargeOreDetector</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>40</BuildTimeSeconds>
+      <ResourceSinkGroup>Utility</ResourceSinkGroup>
+      <MaximumRange>300</MaximumRange>
+      <DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
+      <DamagedSound>ParticleElectrical</DamagedSound>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <PCU>40</PCU>
+    </Definition>
+    <Definition xsi:type="MyObjectBuilder_OreDetectorDefinition">    <!-- SmallOreDetector -->
+      <Id>
+        <TypeId>OreDetector</TypeId>
+        <SubtypeId>SmallOreDetector</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Block_OreDetector</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\detector.dds</Icon>
+      <Description>Description_OreDetector</Description>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="2" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Small\OreDetector.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="1" />
+        <Component Subtype="Construction" Count="2" />
+        <Component Subtype="Motor" Count="1" />
+        <Component Subtype="Computer" Count="1" />
+        <Component Subtype="Detector" Count="1" />
+        <Component Subtype="SteelPlate" Count="2" />
+      </Components>
+      <CriticalComponent Subtype="Detector" Index="0" />
+      <Center x="0" y="0" z="1" />
+      <MountPoints>
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1" Default="true" />
+        <MountPoint Side="Top" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Bottom" StartX="0" StartY="1" EndX="1" EndY="2" />
+        <MountPoint Side="Left" StartX="1" StartY="0" EndX="2" EndY="1" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.50" File="Models\Cubes\Small\OreDetectorConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Small\OreDetectorConstruction_2.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>OreDetector</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>14</BuildTimeSeconds>
+      <ResourceSinkGroup>Utility</ResourceSinkGroup>
+      <MaximumRange>150</MaximumRange>
+      <DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
+      <DamagedSound>ParticleElectrical</DamagedSound>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <PCU>40</PCU>
+    </Definition>
+
+  </CubeBlocks>
+</Definitions>
